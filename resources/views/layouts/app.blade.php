@@ -7,13 +7,16 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>
 
     <title>@yield('title', 'LaraBBS') - Laravel 进阶教程</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/web.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="{{asset('bootstrap/bootstrap.min.css')}}">
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>
 </head>
 
 <body>
