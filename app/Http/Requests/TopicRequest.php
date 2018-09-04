@@ -12,7 +12,8 @@ class TopicRequest extends Request
             case 'POST':
             {
                 return [
-                    // CREATE ROLES
+                    'title' => 'required|unique:posts|max:255',
+                    'body' => 'required',
                 ];
             }
             // UPDATE
