@@ -9,6 +9,7 @@ use App\Http\Requests\TopicRequest;
 use App\Models\Category;
 use Auth;
 use App\Handlers\ImageUploadHandler;
+
 class TopicsController extends Controller
 {
     public function __construct()
@@ -38,7 +39,7 @@ class TopicsController extends Controller
 
     }
 
-    public function store(TopicRequest $request,Topic $topic)
+    public function store(TopicRequest $request, Topic $topic)
     {
         $data = $request->all();
 //        $topic->fill($data);
@@ -71,15 +72,15 @@ class TopicsController extends Controller
         $this->authorize('destroy', $topic);
         $topic->delete();
 
-        return redirect()->route('topics.index')->with('message', '删除成功!');
+        return redirect()->route('topics.index')->with('success', '成功删除！');
     }
 
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
         // 初始化返回数据，默认是失败的
         $data = [
-            'success'   => false,
-            'msg'       => '上传失败!',
+            'success' => false,
+            'msg' => '上传失败!',
             'file_path' => ''
         ];
         // 判断是否有上传文件，并赋值给 $file
@@ -89,8 +90,8 @@ class TopicsController extends Controller
             // 图片保存成功的话
             if ($result) {
                 $data['file_path'] = $result['path'];
-                $data['msg']       = "上传成功!";
-                $data['success']   = true;
+                $data['msg'] = "上传成功!";
+                $data['success'] = true;
             }
         }
         return $data;
