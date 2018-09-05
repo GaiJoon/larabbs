@@ -17,6 +17,6 @@ $factory->define(App\Models\Topic::class, function (Faker $faker) {
         'body' => $faker->text(),
         'excerpt' => $sentence,
         'created_at' => $created_at,
-        'updated_at' => $updated_at,
+        'update d_at' => $updated_at,
     ];
 });
