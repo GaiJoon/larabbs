@@ -46,7 +46,7 @@ class TopicsController extends Controller
 
     public function store(TopicRequest $request, Topic $topic)
     {
-        $data = $request->all($topic->link());
+        $data = $request->all();
 //        $topic->fill($data);
 //        $topic->user_id = Auth::id();
         $data['user_id'] = Auth::id();
@@ -54,7 +54,7 @@ class TopicsController extends Controller
 
         $err = $topic->create($data);
 //        dd($err);
-        return redirect()->to($$topic->link())->with('message', '成功创建主题！');
+        return redirect()->to($topic->link())->with('message', '成功创建主题！');
     }
 
     public function edit(Topic $topic)
