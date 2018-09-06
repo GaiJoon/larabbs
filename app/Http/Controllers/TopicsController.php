@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
@@ -33,7 +34,7 @@ class TopicsController extends Controller
             return redirect($topic->link(), 301);
         }
 
-        return view('topics.show', compact('topic'));
+        return view('topics.show', compact('topic');
     }
 
     public function create(Topic $topic)
@@ -54,6 +55,7 @@ class TopicsController extends Controller
 
         $err = $topic->create($data);
 //        dd($err);
+//        dd($topic->link());
         return redirect()->to($topic->link())->with('message', '成功创建主题！');
     }
 

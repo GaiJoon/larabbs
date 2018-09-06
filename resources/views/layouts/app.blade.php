@@ -12,13 +12,13 @@
     <meta name="description" content="@yield('description', 'LaraBBS 爱好者社区')" />
 
     <!-- Styles -->
-    <link href="{{ asset('css/web.css') }}" rel="stylesheet">
-    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('css/web.css') }}" rel="stylesheet">--}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="{{asset('bootstrap/bootstrap.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('bootstrap/bootstrap.min.css')}}">--}}
 
-    <script src="{{asset('js/jquery.js')}}"></script>
-    <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>
+{{--    <script src="{{asset('js/jquery.js')}}"></script>--}}
+{{--    <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>--}}
     @yield('styles')
 </head>
 
@@ -37,7 +37,7 @@
 </div>
 
 <!-- Scripts -->
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/app.js') }}"></script>
 @yield('scripts')
 </body>
 </html>
