@@ -7,9 +7,10 @@ class ReplyRequest extends Request
     public function rules()
     {
 
-            return [
-                'content' => 'required|min:2',
-            ];
+
+                return [
+                    'content' => 'required|min:2',
+                ];
 
     }
 
