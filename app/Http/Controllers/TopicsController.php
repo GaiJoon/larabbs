@@ -34,7 +34,7 @@ class TopicsController extends Controller
             return redirect($topic->link(), 301);
         }
 
-        return view('topics.show', compact('topic');
+        return view('topics.show', compact('topic'));
     }
 
     public function create(Topic $topic)
