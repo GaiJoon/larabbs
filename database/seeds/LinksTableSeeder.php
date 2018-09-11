@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Link;
 
 class LinksTableSeeder extends Seeder
 {
@@ -9,11 +10,13 @@ class LinksTableSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
+
         // 生成数据集合
         $links = factory(Link::class)->times(6)->make();
-
+//        \Log::info($links);
         // 将数据集合转换为数组，并插入到数据库中
         Link::insert($links->toArray());
     }
