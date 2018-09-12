@@ -43,6 +43,7 @@ class VerificationCodesController extends Controller
 
         $key = 'verificationCode_'.str_random(15);
         $expiredAt = now()->addMinutes(10);
+//        dd($expiredAt);
         // 缓存验证码 10分钟过期。
         \Cache::put($key, ['phone' => $phone, 'code' => $code], $expiredAt);
         // 清除图片验证码缓存
@@ -54,3 +55,5 @@ class VerificationCodesController extends Controller
         ])->setStatusCode(201);
     }
 }
+
+

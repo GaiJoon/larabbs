@@ -20,6 +20,7 @@ class UsersController extends Controller
             return $this->response->errorUnauthorized('验证码错误');
         }
 
+
         $user = User::create([
             'name' => $request->name,
             'phone' => $verifyData['phone'],
@@ -28,7 +29,7 @@ class UsersController extends Controller
 
         // 清除验证码缓存
         \Cache::forget($request->verification_key);
-
+//        dd($this->response->created());
         return $this->response->created();
     }
 }
