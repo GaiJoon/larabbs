@@ -13,7 +13,7 @@ class AuthorizationsController extends Controller
     public function store(AuthorizationRequest $request)
     {
 //        dd('11');
-        return $this->response->noContent();
+//            return $this->response->noContent();
         $username = $request->username;
 
         filter_var($username, FILTER_VALIDATE_EMAIL) ?
