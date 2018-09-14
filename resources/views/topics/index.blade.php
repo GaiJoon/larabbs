@@ -35,5 +35,20 @@
             @include('topics._sidebar')
         </div>
     </div>
+<button id="kl">删除</button>
+    <script>
+            alert();
+            $.ajax({
+                url: '/api/topics/16',
+                data: {_token:"{{ csrf_token() }}", _method: "DELETE"},
+                dataType: 'json',
+                type: 'POST',
+                success: function(data){
+                    console.log(data)
+                },
+                error: function(){}
+            })
 
+
+    </script>
 @endsection

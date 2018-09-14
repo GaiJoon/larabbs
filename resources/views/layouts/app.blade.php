@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="">
 {{--    <link rel="stylesheet" href="{{asset('bootstrap/bootstrap.min.css')}}">--}}
 
-{{--    <script src="{{asset('js/jquery.js')}}"></script>--}}
+    <script src="{{asset('js/jquery.js')}}"></script>
 {{--    <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>--}}
     @yield('styles')
 </head>
